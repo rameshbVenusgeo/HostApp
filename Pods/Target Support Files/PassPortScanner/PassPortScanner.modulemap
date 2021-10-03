@@ -1,0 +1,6 @@
+framework module PassPortScanner {
+  umbrella header "PassPortScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

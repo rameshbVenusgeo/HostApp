@@ -1,0 +1,16 @@
+PODS:
+  - PassPortScanner (1.0.4)
+
+DEPENDENCIES:
+  - PassPortScanner
+
+SPEC REPOS:
+  https://github.com/rameshbVenusgeo/Venus-Private-Podspecs.git:
+    - PassPortScanner
+
+SPEC CHECKSUMS:
+  PassPortScanner: bcccc98633caeb604176b98b554f72164e672e34
+
+PODFILE CHECKSUM: 9fc7abb9f36d6bbdb95330f04dee4b0f73432800
+
+COCOAPODS: 1.11.2

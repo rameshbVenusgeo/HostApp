@@ -1,0 +1,6 @@
+framework module GSSDKScanFlow {
+  umbrella header "GSSDKScanFlow.h"
+
+  export *
+  module * { export * }
+}

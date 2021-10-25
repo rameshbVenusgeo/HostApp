@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-HostApp/Pods-HostApp-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/DocScanner/DocumentScanner.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/PassPortScanner/PassPortScanner.bundle

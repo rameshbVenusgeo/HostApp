@@ -1,16 +1,33 @@
 PODS:
-  - PassPortScanner (1.0.4)
+  - DocScanner (0.1.0)
+  - EVGPUImage2 (0.2.0)
+  - PassPortScanner (1.0.7):
+    - EVGPUImage2
+    - TesseractOCRSDKiOS
+    - XLPagerTabStrip
+  - TesseractOCRSDKiOS (4.0.2)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - DocScanner
   - PassPortScanner
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - EVGPUImage2
+    - TesseractOCRSDKiOS
+    - XLPagerTabStrip
   https://github.com/rameshbVenusgeo/Venus-Private-Podspecs.git:
+    - DocScanner
     - PassPortScanner
 
 SPEC CHECKSUMS:
-  PassPortScanner: bcccc98633caeb604176b98b554f72164e672e34
+  DocScanner: 31faffc01710d0e84db34b11b47e80d77b3d017d
+  EVGPUImage2: 1e057f25fbab811b8a9e98d19f96bbd5eb434913
+  PassPortScanner: 2992d2a084f8405db73cae49680e8659050e1b22
+  TesseractOCRSDKiOS: 5124816fe04de75f4d7ce91eb8b2bb5096aa6519
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 9fc7abb9f36d6bbdb95330f04dee4b0f73432800
+PODFILE CHECKSUM: 969d72d8e5bd4bd3dc1ebca0ce245cdea64c3f8c
 
 COCOAPODS: 1.11.2

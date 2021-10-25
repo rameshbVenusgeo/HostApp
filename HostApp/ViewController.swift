@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     
     private func setupRootViewController() {
-        guard let viewcontroller = PassPortScanner().getRootViewController() else {
+        guard let viewcontroller = PassPortScanner().getRootViewController(scannerType: .Passport) else {
             return
         }
         self.addChild(viewcontroller)

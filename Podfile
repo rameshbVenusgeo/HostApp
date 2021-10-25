@@ -9,5 +9,6 @@ target 'HostApp' do
   use_frameworks!
 
    pod 'PassPortScanner'
+   pod 'DocScanner'
 
 end

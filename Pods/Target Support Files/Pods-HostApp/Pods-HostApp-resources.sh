@@ -97,9 +97,11 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DocScanner/DocumentScanner.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PassPortScanner/PassPortScanner.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/DocScanner/DocumentScanner.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PassPortScanner/PassPortScanner.bundle"
 fi
 

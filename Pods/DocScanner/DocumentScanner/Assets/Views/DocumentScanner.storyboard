@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qel-m3-ssz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="uPc-aD-ML9">
+            <objects>
+                <viewController storyboardIdentifier="BaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qel-m3-ssz" customClass="BaseViewController" customModule="DocumentScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VXn-oS-3Ih">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCB-e7-ybM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Docs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yG1-qD-akO">
+                                        <rect key="frame" x="20" y="55" width="83" height="30"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aY1-ye-gv9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" systemColor="tintColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IWn-oy-haR"/>
+                                    <constraint firstAttribute="bottom" secondItem="yG1-qD-akO" secondAttribute="bottom" constant="15" id="Kw0-Jr-9yo"/>
+                                    <constraint firstItem="yG1-qD-akO" firstAttribute="leading" secondItem="BCB-e7-ybM" secondAttribute="leading" constant="20" id="bX1-Kk-3nW"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DocScanPlaceholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="bRZ-IA-tYO">
+                                <rect key="frame" x="0.0" y="110" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="EoR-Ac-kmh"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-gY-hBL">
+                                <rect key="frame" x="20" y="420" width="374" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phM-zT-SiK">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="1) Ensure you position your vaccine certificate is inside the ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="boxed outline">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=".">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="la3-ml-MlV">
+                                        <rect key="frame" x="0.0" y="38.5" width="374" height="17.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="2) Ensure that you are able to clearly see the page">
+                                                <attributes>
+                                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AP3-vp-Zuj">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="17.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="3) Adjust your camera focus for clarity">
+                                                <attributes>
+                                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lid-ou-N7n">
+                                        <rect key="frame" x="0.0" y="81.5" width="374" height="38.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="A7X-dm-he5"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GFx-ak-yxU">
+                                <rect key="frame" x="82" y="728" width="250" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCt-Tv-8vj">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Scan Vaccine Certificate">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="scanVaccineCertificateButtonTapped:" destination="qel-m3-ssz" eventType="touchUpInside" id="3nZ-Oe-2Db"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ue-LO-8GX">
+                                        <rect key="frame" x="0.0" y="60" width="250" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Upload Vaccine Certificate">
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="uploadVaccineCertificateButtonTapped:" destination="qel-m3-ssz" eventType="touchUpInside" id="xwA-qu-Ren"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Afr-Bn-r4i"/>
+                                    <constraint firstAttribute="width" constant="250" id="qws-4h-t9Z"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DO0-Wi-4oZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bRZ-IA-tYO" firstAttribute="leading" secondItem="DO0-Wi-4oZ" secondAttribute="leading" id="2Y9-mn-5EY"/>
+                            <constraint firstItem="kuR-gY-hBL" firstAttribute="top" secondItem="bRZ-IA-tYO" secondAttribute="bottom" constant="10" id="NYT-kq-brY"/>
+                            <constraint firstItem="DO0-Wi-4oZ" firstAttribute="trailing" secondItem="bRZ-IA-tYO" secondAttribute="trailing" id="YCR-BD-goy"/>
+                            <constraint firstItem="kuR-gY-hBL" firstAttribute="trailing" secondItem="DO0-Wi-4oZ" secondAttribute="trailing" constant="-20" id="bgY-rD-xEd"/>
+                            <constraint firstItem="DO0-Wi-4oZ" firstAttribute="trailing" secondItem="BCB-e7-ybM" secondAttribute="trailing" id="c0r-ma-yje"/>
+                            <constraint firstItem="bRZ-IA-tYO" firstAttribute="top" secondItem="BCB-e7-ybM" secondAttribute="bottom" constant="10" id="ejG-5F-7hT"/>
+                            <constraint firstItem="BCB-e7-ybM" firstAttribute="top" secondItem="VXn-oS-3Ih" secondAttribute="top" id="fLb-y3-ptI"/>
+                            <constraint firstItem="BCB-e7-ybM" firstAttribute="leading" secondItem="DO0-Wi-4oZ" secondAttribute="leading" id="hBf-Xi-p0C"/>
+                            <constraint firstItem="GFx-ak-yxU" firstAttribute="centerX" secondItem="VXn-oS-3Ih" secondAttribute="centerX" id="upu-bj-5Q4"/>
+                            <constraint firstItem="kuR-gY-hBL" firstAttribute="leading" secondItem="DO0-Wi-4oZ" secondAttribute="leading" constant="20" id="wpI-3M-p4Y"/>
+                            <constraint firstItem="DO0-Wi-4oZ" firstAttribute="bottom" secondItem="GFx-ak-yxU" secondAttribute="bottom" constant="24" id="yqc-j9-jLd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvm-cF-xOo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+        <!--Document List View Controller-->
+        <scene sceneID="akT-fd-Gnf">
+            <objects>
+                <viewController storyboardIdentifier="DocumentListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jrn-aa-MZK" customClass="DocumentListViewController" customModule="DocumentScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o5A-dN-rvB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-36-9XA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Docs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4e-op-knd">
+                                        <rect key="frame" x="20" y="55" width="83" height="30"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aqB-Rm-p9j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" systemColor="tintColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OCg-Lx-dhG"/>
+                                    <constraint firstAttribute="bottom" secondItem="z4e-op-knd" secondAttribute="bottom" constant="15" id="Wew-q1-bUU"/>
+                                    <constraint firstItem="z4e-op-knd" firstAttribute="leading" secondItem="xDA-36-9XA" secondAttribute="leading" constant="20" id="hKz-iy-jGe"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xmm-7o-egy">
+                                <rect key="frame" x="20" y="120" width="374" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-j4-Jns">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Your COVID Vaccine Certificate
+Scan Successful</string>
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6m-9k-cr1">
+                                        <rect key="frame" x="0.0" y="49.5" width="374" height="52"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Click to scan next document
+Click to upload next document
+Click submit when complete</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="15" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnK-tq-Avd">
+                                        <rect key="frame" x="0.0" y="116.5" width="374" height="3.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="k8p-o0-apm"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VdS-yw-FMX">
+                                <rect key="frame" x="10" y="240" width="384" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0/5)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzN-cA-NVe">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QMO-aH-4Ep"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tU5-GH-hmr">
+                                <rect key="frame" x="82" y="728" width="250" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pch-8M-hpe">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeA-FZ-Rwj">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="CIF-Gv-S9t"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Scan Next">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="scanNextButtonTapped:" destination="jrn-aa-MZK" eventType="touchUpInside" id="1yN-dB-1uS"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEO-zr-32e">
+                                                <rect key="frame" x="120" y="0.0" width="30" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K7-bM-iWg">
+                                                <rect key="frame" x="150" y="0.0" width="100" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="yIy-38-IpW"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="jrn-aa-MZK" eventType="touchUpInside" id="0yh-6g-ql6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AK-sb-J0y">
+                                        <rect key="frame" x="0.0" y="60" width="250" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2A9-kl-d2T">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="2AM-RS-olV"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Qy-ok-MMw">
+                                                <rect key="frame" x="75" y="0.0" width="100" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Hhu-6G-5uc"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="jrn-aa-MZK" eventType="touchUpInside" id="nfO-Hy-dus"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPT-cm-6U4">
+                                                <rect key="frame" x="175" y="0.0" width="75" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="JxC-vU-FMt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2A9-kl-d2T" firstAttribute="leading" secondItem="7AK-sb-J0y" secondAttribute="leading" id="lr7-F6-s7y"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="PhC-pN-wfb"/>
+                                    <constraint firstAttribute="width" constant="250" id="enJ-6z-eSn"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-LI-Eli">
+                                <rect key="frame" x="20" y="280" width="374" height="438"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jrn-aa-MZK" id="Pyv-NE-czv"/>
+                                    <outlet property="delegate" destination="jrn-aa-MZK" id="HiJ-oh-qVy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PO8-2s-lqN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VdS-yw-FMX" firstAttribute="leading" secondItem="PO8-2s-lqN" secondAttribute="leading" constant="10" id="33e-i4-YiH"/>
+                            <constraint firstItem="ekS-LI-Eli" firstAttribute="leading" secondItem="PO8-2s-lqN" secondAttribute="leading" constant="20" id="4Gm-bN-wrI"/>
+                            <constraint firstItem="PO8-2s-lqN" firstAttribute="bottom" secondItem="tU5-GH-hmr" secondAttribute="bottom" constant="24" id="4no-9U-LWM"/>
+                            <constraint firstItem="PO8-2s-lqN" firstAttribute="trailing" secondItem="ekS-LI-Eli" secondAttribute="trailing" constant="20" id="6pD-nt-j1U"/>
+                            <constraint firstItem="xmm-7o-egy" firstAttribute="top" secondItem="xDA-36-9XA" secondAttribute="bottom" constant="20" id="8Eb-Ma-htz"/>
+                            <constraint firstItem="xDA-36-9XA" firstAttribute="leading" secondItem="PO8-2s-lqN" secondAttribute="leading" id="Ht0-Ne-qan"/>
+                            <constraint firstItem="xDA-36-9XA" firstAttribute="top" secondItem="o5A-dN-rvB" secondAttribute="top" id="LQb-KQ-ivS"/>
+                            <constraint firstItem="tU5-GH-hmr" firstAttribute="centerX" secondItem="o5A-dN-rvB" secondAttribute="centerX" id="OoM-hU-sNe"/>
+                            <constraint firstItem="xmm-7o-egy" firstAttribute="trailing" secondItem="PO8-2s-lqN" secondAttribute="trailing" constant="-20" id="Pdz-Lq-2Ut"/>
+                            <constraint firstItem="PO8-2s-lqN" firstAttribute="trailing" secondItem="VdS-yw-FMX" secondAttribute="trailing" constant="20" id="UQB-Kz-jjW"/>
+                            <constraint firstItem="PO8-2s-lqN" firstAttribute="trailing" secondItem="xDA-36-9XA" secondAttribute="trailing" id="WHE-2J-wec"/>
+                            <constraint firstItem="ekS-LI-Eli" firstAttribute="top" secondItem="VdS-yw-FMX" secondAttribute="bottom" constant="10" id="dQe-JA-ABC"/>
+                            <constraint firstItem="VdS-yw-FMX" firstAttribute="top" secondItem="xmm-7o-egy" secondAttribute="bottom" id="fjw-GV-VYI"/>
+                            <constraint firstItem="xmm-7o-egy" firstAttribute="leading" secondItem="PO8-2s-lqN" secondAttribute="leading" constant="20" id="ifk-JF-hMN"/>
+                            <constraint firstItem="tU5-GH-hmr" firstAttribute="top" secondItem="ekS-LI-Eli" secondAttribute="bottom" constant="10" id="p6S-tH-HRh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="documentListTableView" destination="ekS-LI-Eli" id="cRT-Tt-rdE"/>
+                        <outlet property="documentNumberLabel" destination="wzN-cA-NVe" id="UsE-wt-Rt0"/>
+                        <outlet property="scanNextButton" destination="EeA-FZ-Rwj" id="enB-DY-lvE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3XK-0u-frB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DocScanPlaceholder.png" width="232" height="272"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-HostApp/Pods-HostApp-frameworks.sh
+${PODS_ROOT}/DocScanner/GSSDKCore.framework
+${PODS_ROOT}/DocScanner/GSSDKScanFlow.framework
+${BUILT_PRODUCTS_DIR}/EVGPUImage2/EVGPUImage2.framework
+${PODS_ROOT}/PassPortScanner/XavierFramework.framework
+${BUILT_PRODUCTS_DIR}/TesseractOCRSDKiOS/TesseractOCRSDKiOS.framework
+${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework

@@ -7,13 +7,20 @@
 
 import Foundation
 
+public enum ScannerType {
+    case Passport
+    case Visa
+}
+
 public class PassPortScanner {
+    
     public init() {
         
     }
     
-    public func getRootViewController() -> UIViewController? {
+    public func getRootViewController(scannerType: ScannerType) -> UIViewController? {
         guard let viewController: BaseViewController = UIStoryboard(name: "PassPortScanner", bundle: Bundle.passportScannerBundle()).instantiateInitialViewController() as? BaseViewController else { return nil }
+        viewController.selectedScannerType = scannerType
         return viewController
     }
 }
